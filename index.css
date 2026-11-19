@@ -166,7 +166,7 @@ tr:not(:last-child) {
     border-bottom: 1px solid var(--stone-150);
 }
 
-@media (min-width: 375px) {
+/* @media (min-width: 375px) {
     main {
         width: 375px;
         margin: 0;
@@ -187,24 +187,11 @@ tr:not(:last-child) {
 
 }
 
-@media (min-width: 768px) {
-    main {
-        width: 38.5rem;
-    }
 
-    section {
-        width: 38.5rem;
-    }
-
-    .recipe__picture {
-        width: 33.5rem;
-    }
-
-}
 
 @media (min-width: 1440px) {
     main {
         margin: 8rem;
     }
 }
-
+ */
