@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "Young Serif Regular";
+    src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Outfit Regular";
+    src: url("assets/fonts/outfit/static/Outfit-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Outfit SemiBold";
+    src: url("assets/fonts/outfit/static/Outfit-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Outfit Bold";
+    src: url("assets/fonts/outfit/static/Outfit-Bold.ttf");
+}
+
+:root {
+    /* Colors variables */
+    --rose-800: #7A284E;
+    --rose-50: #FFF7FB;
+    --stone-900: #312E2C;
+    --stone-600: #5F564D;
+    --stone-150: #E3DDD7;
+    --stone-100: #F3E5D7;
+    --brown-800: #854632;
+    --white: #FFFFFF;
+
+    /* Fonts variables */
+    --font-young-serif: "Young Serif Regular", sans-serif;
+    --font-outfit: "Outfit Regular", sans-serif;
+    --font-outfit-semibold: "Outfit SemiBold", sans-serif;
+    --font-outfit-bold: "Outfit Bold", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--stone-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main {
+    width: 46rem;
+    background-color: var(--white);
+    padding: 2.5rem;
+    font-family: var(--font-outfit);
+    font-size: 1rem;
+    color: var(--stone-600);
+    line-height: 150%;
+    border-radius: 2rem;
+    margin: 8rem;
+}
+
+ul li::marker {
+    font-size: 0.75rem;
+}
+
+ol li::marker {
+    font-family: var(--font-outfit-bold);
+    color: var(--brown-800);
+    font-size: 1rem;
+}
+
+li {
+    padding-inline-start: 1rem;
+}
+
+section {
+    width: 41rem;
+}
+
+.recipe__picture {
+    width: 41rem;
+    border-radius: 0.75rem;
+    margin-bottom: 40px;
+}
+
+
+.recipe__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.recipe__heading h1 {
+    font-family: var(--font-young-serif);
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.recipe__preparation {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--rose-50);
+    border-radius: 0.75rem;
+}
+
+.recipe__preparation h2 {
+    font-family: var(--font-outfit-semibold);
+    font-size: 1.25rem;
+    color: var(--rose-800);
+    margin-bottom: 1rem;
+}
+
+.recipe__preparation ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.recipe__preparation li::marker {
+    color: var(--rose-800);
+    font-size: 0.75rem;
+}
+
+.recipe__process h2 {
+    font-family: var(--font-young-serif);
+    font-weight: 500;
+    font-size: 1.75rem; 
+    color: var(--brown-800);
+    margin-bottom: 1.5rem;
+}
+
+.recipe__process ul, .recipe__process ol {
+    margin-left: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.recipe__process li {
+    margin-bottom: 0.5rem;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 32px;
+}
+
+th {
+    font-weight: 500;
+}
+
+td {
+    font-weight: bold;
+    color: var(--brown-800);
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+@media (min-width: 375px) {
+    main {
+        width: 375px;
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+       width: 375px;
+    }
+
+    .recipe__picture {
+        width: 375px;
+    }
+
+    .recipe__heading, .recipe__preparation, .recipe__process {
+        padding: 0 2rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+    main {
+        width: 38.5rem;
+    }
+
+    section {
+        width: 38.5rem;
+    }
+
+    .recipe__picture {
+        width: 33.5rem;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    main {
+        margin: 8rem;
+    }
+}
+
