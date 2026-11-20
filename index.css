@@ -1,40 +1,4 @@
-@font-face {
-    font-family: "Young Serif Regular";
-    src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Outfit Regular";
-    src: url("assets/fonts/outfit/static/Outfit-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Outfit SemiBold";
-    src: url("assets/fonts/outfit/static/Outfit-SemiBold.ttf");
-}
-
-@font-face {
-    font-family: "Outfit Bold";
-    src: url("assets/fonts/outfit/static/Outfit-Bold.ttf");
-}
-
-:root {
-    /* Colors variables */
-    --rose-800: #7A284E;
-    --rose-50: #FFF7FB;
-    --stone-900: #312E2C;
-    --stone-600: #5F564D;
-    --stone-150: #E3DDD7;
-    --stone-100: #F3E5D7;
-    --brown-800: #854632;
-    --white: #FFFFFF;
-
-    /* Fonts variables */
-    --font-young-serif: "Young Serif Regular", sans-serif;
-    --font-outfit: "Outfit Regular", sans-serif;
-    --font-outfit-semibold: "Outfit SemiBold", sans-serif;
-    --font-outfit-bold: "Outfit Bold", sans-serif;
-}
+/* CSS RESET */
 
 * {
     margin: 0;
@@ -42,156 +6,270 @@
     box-sizing: border-box;
 }
 
+/* Fonts list  */
+
+@font-face {
+    font-family: "Young Serif";
+    src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/fonts/outfit/Outfit-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/fonts/outfit/Outfit-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Outfit Bold";
+    src: url("assets/fonts/outfit/Outfit-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* Colors variables */
+    --color-white: #ffffff;
+    --color-rose-800: #7a284e;
+    --color-rose-50: #fff7fb;
+    --color-stone-900: #312e2c;
+    --color-stone-600: #5f564d;
+    --color-stone-150: #e3ddd7;
+    --color-stone-100: #f3e5d7;
+    --color-brown-800: #854632;
+
+    /* Fonts variables */
+    --font-family-young-serif: "Young Serif", sans-serif;
+    --font-family-outfit: "Outfit", sans-serif;
+
+    /* Font sizes variables */
+    --font-size-preset-1: 2.5rem;
+    --font-size-preset-1-mobile: 2.25rem;
+    --font-size-preset-2: 1.75rem;
+    --font-size-preset-3: 1.25rem;
+    --font-size-preset-4: 1rem;
+
+    /* Spacing variables */
+    --spacing-100: 0.5rem; /* 8px */
+    --spacing-150: 0.75rem; /* 12px */
+    --spacing-200: 1rem; /* 16px */
+    --spacing-300: 1.5rem; /* 24px */
+    --spacing-400: 2rem; /* 32px */
+    --spacing-500: 2.5rem; /* 40px */
+    --spacing-600: 3rem; /* 48px */
+    --spacing-1600: 8rem; /* 128px */
+
+    /* Radius variables */
+    --radius-100: 0.75rem;
+    --radius-200: 1.5rem;
+}
+
+/* GENERAL SELECTORS */
+
 body {
-    background-color: var(--stone-100);
+    background-color: var(--color-stone-100);
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    font-family: var(--font-family-outfit);
+    font-size: var(--font-size-preset-4);
+    font-weight: 400;
+    color: var(--color-stone-600);
+    line-height: 150%;
 }
 
 main {
-    width: 46rem;
-    background-color: var(--white);
-    padding: 2.5rem;
-    font-family: var(--font-outfit);
+    background-color: var(--color-white);
+    font-family: var(--font-family-outfit);
     font-size: 1rem;
-    color: var(--stone-600);
     line-height: 150%;
-    border-radius: 2rem;
-    margin: 8rem;
 }
 
-ul li::marker {
-    font-size: 0.75rem;
+h1,
+h2 {
+    line-height: 100%;
 }
 
-ol li::marker {
-    font-family: var(--font-outfit-bold);
-    color: var(--brown-800);
-    font-size: 1rem;
+hr {
+    border: 0;
+    border-bottom: 1px solid var(--color-stone-150);;
 }
 
 li {
-    padding-inline-start: 1rem;
+    padding-inline-start: var(--spacing-300);
 }
 
-section {
-    width: 41rem;
-}
-
-.recipe__picture {
-    width: 41rem;
-    border-radius: 0.75rem;
-    margin-bottom: 40px;
-}
-
-
-.recipe__heading {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.recipe__heading h1 {
-    font-family: var(--font-young-serif);
-    font-weight: 400;
-    font-size: 2.5rem;
-}
-
-.recipe__preparation {
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    background-color: var(--rose-50);
-    border-radius: 0.75rem;
-}
-
-.recipe__preparation h2 {
-    font-family: var(--font-outfit-semibold);
-    font-size: 1.25rem;
-    color: var(--rose-800);
-    margin-bottom: 1rem;
-}
-
-.recipe__preparation ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.recipe__preparation li::marker {
-    color: var(--rose-800);
-    font-size: 0.75rem;
-}
-
-.recipe__process h2 {
-    font-family: var(--font-young-serif);
-    font-weight: 500;
-    font-size: 1.75rem; 
-    color: var(--brown-800);
-    margin-bottom: 1.5rem;
-}
-
-.recipe__process ul, .recipe__process ol {
-    margin-left: 1.5rem;
-    margin-bottom: 4rem;
-}
-
-.recipe__process li {
-    margin-bottom: 0.5rem;
-}
+strong {
+    font-weight: 700;
+} 
 
 table {
     width: 100%;
     text-align: left;
+    border-collapse: collapse;
 }
 
-th, td {
-    padding: 12px 32px;
+th,
+td {
+    padding: var(--spacing-150) var(--spacing-400);
 }
 
 th {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 td {
-    font-weight: bold;
-    color: var(--brown-800);
+    font-weight: 700;
+    color: var(--color-brown-800);
 }
 
-tr:not(:last-child) {
-    border-bottom: 1px solid var(--stone-150);
+tr + tr {
+    border-top: 1px solid var(--color-stone-150);
+} 
+
+/* LAYOUT */
+
+.recipe__content {
+    padding: var(--spacing-500) var(--spacing-400);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
 }
 
-/* @media (min-width: 375px) {
-    main {
-        width: 375px;
-        margin: 0;
+/* PICTURE SECTION */
+
+.recipe__picture {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* DESCRIPTION SECTION */
+
+.recipe__description {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+.recipe__description h1 {
+    font-family: var(--font-family-young-serif);
+    font-size: var(--font-size-preset-1-mobile);
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--color-stone-900);
+}
+
+/* PREPARATION SECTION */
+
+.recipe__preparation {
+    padding: var(--spacing-300);
+    background-color: var(--color-rose-50);
+    border-radius: var(--radius-100);
+}         
+
+.recipe__preparation h2 {
+    font-family: var(--font-family-outfit);
+    font-size: 1.25rem;
+    color: var(--color-rose-800);
+    margin-bottom: 1rem;
+}
+
+.recipe__ul {
+    padding-left: var(--spacing-300);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+}
+
+.recipe__ul li::marker {
+    color: var(--color-rose-800);
+    font-size: 0.75rem;
+}
+
+.recipe__section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+.recipe__section h2 {
+    font-family: var(--font-family-young-serif);
+    font-size: var(--font-size-preset-2);
+    color: var(--color-brown-800);
+    font-weight: 400;
+}
+
+.recipe__section .recipe__ul li::marker {
+    color: var(--color-brown-800);
+}
+
+.recipe__section .recipe__ol {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+    list-style: none;
+    counter-reset: step;
+}
+
+.recipe__section .recipe__ol li {
+   counter-increment: step;
+   padding-left: var(--spacing-500);
+   position: relative;
+}
+
+.recipe__section .recipe__ol li::before {
+    content: counter(step) ".";
+    position: absolute;
+    left: var(--spacing-100);
+    color: var(--color-brown-800);
+    font-weight: 700;
+}
+
+
+
+@media (min-width: 48rem) {
+    body {
+        padding: var(--spacing-1600) var(--spacing-600);
+    }
+
+    .recipe {
+        max-width: 38.5rem; 
+        display: flex;
+        flex-direction: column;
+        border-radius: var(--radius-200);
+        padding: var(--spacing-500);
+        gap: var(--spacing-500);
+    }
+
+    .recipe__content {
         padding: 0;
     }
 
-    section {
-       width: 375px;
-    }
-
     .recipe__picture {
-        width: 375px;
+        border-radius: var(--radius- 100);
     }
-
-    .recipe__heading, .recipe__preparation, .recipe__process {
-        padding: 0 2rem;
-    }
-
-}
-
-
-
-@media (min-width: 1440px) {
-    main {
-        margin: 8rem;
+    
+    .recipe__description h1 {
+        font-size: var(--font-size-preset-1);
     }
 }
- */
+
+@media (min-width: 64rem) {
+    .recipe {
+        max-width: 46rem;
+    }
+}
