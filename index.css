@@ -260,7 +260,7 @@ tr + tr {
     }
 
     .recipe__picture {
-        border-radius: var(--radius- 100);
+        border-radius: var(--radius-100);
     }
     
     .recipe__description h1 {
@@ -272,4 +272,4 @@ tr + tr {
     .recipe {
         max-width: 46rem;
     }
-}
+} 
